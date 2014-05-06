@@ -1,0 +1,18 @@
+
+#print ("Input string:")
+word = "rrttyy"
+
+letter_count = {}
+for letter in word:
+    if letter in letter_count:
+        letter_count[letter] += 1
+    else:
+        letter_count[letter] = 1
+
+first_letter = "There are no letters that appear only once"
+for letter in word:
+    if letter_count[letter] == 1:
+        first_letter = "First letter that appears only once: " + letter
+        break
+
+print (first_letter)
