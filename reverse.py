@@ -34,5 +34,26 @@ def reverse_words(letters_list):
 
     return new_string
 
-print "The new string with reversed words: " + reverse_words(first_string)
+#print "The new string with reversed words: " + reverse_words(first_string)
 
+def reverse_order_words(letter_list):
+    list_length = len(letter_list)
+    i = list_length - 1
+    new_string = ''
+
+    while i >= 0:
+        word = ''
+
+        while (letter_list[i] != " ") & ( i >= 0):
+            word += letter_list[i]
+            i -= 1
+
+        if i == 0:
+            new_string += reverse_string(word)
+        else:
+            new_string += reverse_string(word) + " "
+        i -= 1
+
+    return new_string
+
+print reverse_order_words(first_string)
