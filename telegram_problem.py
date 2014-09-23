@@ -7,31 +7,31 @@ my_string_list = ['Hello I am Phoebe!',
                    'I know you, you feed me.',
                    'You are Helen and Anton.']
 
-def split_lines_by_word(line_list):
-    new_word_list = []
+def split_lines_into_words(line_list):
+    new_words_list = []
     for line in line_list:
-        new_word_list.extend(line.split(' '))
+        new_words_list.extend(line.split(' '))
 
-    return new_word_list
+    return new_words_list
 
-def generate_lines_with_new_length(accepted_line_list, char_number):
-    new_word_list = split_lines_by_word(accepted_line_list)
-    new_line_list = []
-    count_letters = 0
+def generate_lines_with_new_length(accepted_lines_list, new_length):
+    new_words_list = split_lines_into_words(accepted_lines_list)
+    new_lines_list = []
+    letters_count = 0
     current_line = ''
 
-    for word in new_word_list:
-        len_word = len(word)
+    for word in new_words_list:
+        word_length = len(word)
 
-        if (count_letters + len_word) < char_number:
+        if (letters_count + word_length) < new_length:
             current_line += word + ' '
-            count_letters += len_word + 1
+            letters_count += word_length + 1
         else:
-            new_line_list.append(current_line)
+            new_lines_list.append(current_line)
             current_line = word + ' '
-            count_letters = len_word + 1
-    new_line_list.append(current_line)
-    return new_line_list
+            letters_count = word_length + 1
+    new_lines_list.append(current_line)
+    return new_lines_list
 
 print("\n".join(generate_lines_with_new_length(my_string_list, w)))
 

@@ -2,6 +2,16 @@
 
 #print h
 
+#???
+
+#complex numbers
+
+#Python Identity Operators:
+#Identity operators compare the memory locations of two objects. There are two Identity operators explained below:
+
+#If the else statement is used with a for loop, the else statement is executed when the loop has exhausted iterating
+# the list.
+
 class Tree:
     def move(self):
         print "Tree moved"
