@@ -1,0 +1,18 @@
+
+#initialize elements with object and link onto the next element
+#add element to the end of list
+#delete element by index
+#insert element
+#fined element
+
+
+class Node:
+    def __init__(self, value = None, next_element = None):
+        self.value = value
+        self.next_element = next_element
+
+class LinkedList:
+    def add(self, element):
+        pass
+
+
